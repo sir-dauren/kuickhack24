@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "7e5db495-0ea8-4359-b00b-fc9272814e99",
+		"name": "kuickhack24",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22973800"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"alastor@gmail.com\",\n    \"password\": \"54444812\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8081/auth/sign-in/"
+					},
+					"response": []
+				},
+				{
+					"name": "Sign Out",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{access_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8080/auth/sign-out/"
+					},
+					"response": []
+				},
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"Alastor\",\n    \"email\": \"alastor@gmail.com\",\n    \"password\": \"54444812\",\n    \"password_confirmation\": \"54444812\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/auth/sign-up/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "documents",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{access_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8081/documents/"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{access_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "document",
+									"type": "file",
+									"src": "postman-cloud:///1ef06632-b159-4b60-8c33-1f2271230eac"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8081/documents/create/"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{access_token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8081/documents/1/"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

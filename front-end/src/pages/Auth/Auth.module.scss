@@ -1,0 +1,43 @@
+@import './../../assets/styles/variables.scss';
+
+.auth {
+      @apply flex justify-center items-center flex-col w-full h-full p-10;
+
+      .form {
+            @apply flex justify-center items-center flex-col relative w-full h-full pt-20 pr-20 pl-20;
+            max-width: 540px;
+            &::after {
+                  @apply w-full h-full bg-white absolute -z-10 opacity-40 rounded-lg;
+                  display: block;
+                  content: "";
+            }
+
+            h1 {
+                  @apply text-4xl mb-6 font-bold font-mono;
+            }
+
+            &__component {
+                  @apply flex flex-col justify-start w-full mb-2; 
+
+                  label {
+                        @apply opacity-80 text-base;
+                  }
+
+                  input {
+                        @apply rounded-md text-base font-normal p-2 outline-none transition-all delay-100 ease-in;
+                        &:hover, &:focus {
+                              outline: 1px solid $red;
+                        }
+                  }
+            }
+            &__change__type {
+                  @apply flex mt-6 gap-4;
+                  a {
+                        @apply cursor-pointer transition-all delay-100 ease-in;
+                        &:hover, &:focus, &:active {
+                              color: $red;
+                        }
+                  }
+            }
+      }
+}

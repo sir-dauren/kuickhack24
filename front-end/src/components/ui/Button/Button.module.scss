@@ -1,0 +1,10 @@
+@import './../../../assets/styles/variables.scss';
+
+.button {
+      @apply text-base font-normal flex justify-center gap-2 items-center p-3 pr-8 pl-8 bg-white mt-2 rounded-md transition-all delay-100 ease-in;
+
+      &:hover {
+            background-color: $red;
+            color: $lightgray;
+      }
+}

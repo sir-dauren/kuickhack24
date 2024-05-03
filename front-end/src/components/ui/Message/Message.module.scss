@@ -1,0 +1,11 @@
+@import './../../../assets/styles/variables.scss';
+
+.message {
+      @apply flex justify-start items-center p-2 pl-6 pr-6 fixed z-50 text-white rounded-md top-5 left-5 font-bold gap-2;
+      max-width: 60vw;
+      background-color: $red;
+
+      svg {
+            @apply text-xl
+      }
+}

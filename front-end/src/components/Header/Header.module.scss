@@ -1,0 +1,28 @@
+@import './../../assets/styles/variables.scss';
+
+.header {
+      @apply flex justify-between items-center h-14 relative;
+      
+      .header__right {
+            @apply flex justify-center items-center gap-10;
+
+            .link {
+                  @apply text-lg transition-all delay-100 ease-in;
+
+                  &:hover {
+                        @apply cursor-pointer;
+                        color: $red;
+                  }
+            }
+            .link__menu {
+                  @apply text-3xl;
+            }
+            .link__user {
+                  @apply text-3xl cursor-pointer;
+            }
+      }
+
+      .header__left {
+            @apply flex justify-center items-center gap-10;
+      }
+}

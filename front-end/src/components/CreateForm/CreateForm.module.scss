@@ -1,0 +1,7 @@
+.form {
+      @apply flex justify-start items-start flex-col mt-2 mb-2;
+
+      input {
+            @apply w-full bg-white p-3 text-base pr-8 pl-8 flex justify-start items-start flex-col mt-4 mb-4 rounded-full bg-white cursor-pointer;
+      }
+}
